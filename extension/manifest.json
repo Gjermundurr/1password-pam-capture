@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "1Password PAM Capture",
+  "version": "1.0",
+  "permissions": ["clipboardRead", "scripting", "activeTab"],
+  "host_permissions": ["https://pam.ikommservices.no/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://pam.ikommservices.no/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
