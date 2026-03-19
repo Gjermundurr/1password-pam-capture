@@ -1,0 +1,14 @@
+[Unit]
+Description=1password PAM integration
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+WorkingDirectory=/home/gjefougn/Repos/1password-pam-capture/
+ExecStart=/usr/bin/node /home/gjefougn/Repos/1password-pam-capture/server.js
+
+[Install]
+WantedBy=default.target
+
